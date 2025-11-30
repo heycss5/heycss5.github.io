@@ -1,5 +1,5 @@
 # Software Company Website    
-## ( [Click here to view the deployed website](https://sherwinvishesh.github.io/Software-Company-Website/) )
+## ( [Click here to view the deployed website](https://heycss5.github.io/Software-Company-Website/) )
 
 This project represents my final internship project at Nexus Info, where I was tasked with creating a comprehensive website for a software company. The goal was to showcase my expertise in delivering top-notch web solutions.
 
@@ -33,7 +33,7 @@ To set up a local copy:
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/sherwinvishesh/Software-Company-Website.git
+   git clone https://github.com/heycss5/Software-Company-Website.git
    ```
  2.Navigate to the directory:
  ```sh
