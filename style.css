@@ -5,10 +5,8 @@
     --secondary-color: #f4f4f4;
     --accent-color: #007bff;
     --text-color: #333;
-    /* 💡 누락된 변수 추가 */
-    --sub-text-color: #666;
-    --secondary-bg-color: #ffffff;
-    /* 카드 배경 색상 */
+    --sub-text-color: #666; 
+    --secondary-bg-color: #ffffff; /* 카드 배경 색상 */
 }
 
 /* 기본 스타일 및 초기화 */
@@ -66,12 +64,14 @@ nav a.active {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
+
+
 /* --- 1.5 Hero Section (Home Screen) Styles --- */
 
 .hero-section {
     padding: 100px 20px;
     text-align: center;
-    background-color: var(--secondary-bg-color); /* 흰색 배경 */
+    background-color: var(--secondary-bg-color); 
     border-bottom: 2px solid #ddd;
 }
 
@@ -125,12 +125,6 @@ nav a.active {
     margin-left: 10px;
 }
 
-/* 🚩 Profile 섹션의 active 클래스를 제거하여 초기에는 Hero만 보이도록 합니다. */
-#section-profile {
-    display: none; 
-}
-/* 단, JS가 로드된 후 JS가 다시 Profile을 active로 만들 수 있으므로, JS 코드를 수정해야 합니다. */
-
 
 /* --- 2. Main Content 레이아웃 및 섹션 전환 (핵심) --- */
 main {
@@ -141,24 +135,26 @@ main {
 }
 
 .content-section {
-    /* 💡 섹션 전환을 위한 필수 설정: 기본적으로 숨김 */
-    display: none;
+    /* 섹션 전환을 위한 필수 설정: 기본적으로 숨김 */
+    display: none; 
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
 }
 
 .content-section.active {
-    /* 💡 JavaScript로 활성화될 때만 보이게 함 */
-    display: block;
+    /* JavaScript로 활성화될 때만 보이게 함 */
+    display: block; 
 }
+
 
 /* --- 3. Profile/Archive 등 내부 레이아웃 --- */
 
 .profile-content {
+    /* 🚩 Profile 레이아웃을 세로(column)로 변경 */
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    gap: 30px; 
+    padding-top: 20px;
 }
 
 .profile-content .bio,
@@ -167,7 +163,7 @@ main {
     margin-top: 0;
 }
 
-/* --- Archive 탭 네비게이션 스타일 --- */
+/* Archive 탭 네비게이션 스타일 */
 .archive-tabs {
     display: flex;
     margin: 20px 0;
@@ -192,7 +188,7 @@ main {
     border-bottom: 3px solid var(--accent-color);
 }
 
-/* --- 서브 콘텐츠 숨김/표시 처리 (Archive 탭) --- */
+/* 서브 콘텐츠 숨김/표시 처리 (Archive 탭) */
 .archive-tab-content {
     display: none;
     padding: 20px 0;
@@ -216,8 +212,7 @@ main {
     display: block;
     border-radius: 4px;
     object-fit: cover;
-    aspect-ratio: 1 / 1;
-    /* 정사각형 비율 유지 */
+    aspect-ratio: 1 / 1; 
 }
 
 .gallery-item {
@@ -227,12 +222,11 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
 }
-
 .gallery-item:hover {
     transform: scale(1.02);
 }
 
-/* --- Lightbox (Modal) Styles --- */
+/* Lightbox (Modal) Styles */
 .modal {
     display: none;
     position: fixed;
@@ -278,13 +272,8 @@ main {
 }
 
 @keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-
-    to {
-        transform: scale(1)
-    }
+    from { transform: scale(0) }
+    to { transform: scale(1) }
 }
 
 
@@ -412,7 +401,7 @@ main {
 }
 
 .contact-link.instagram {
-    background-color: #E4405F;
+    background-color: #E4405F; 
 }
 
 .footer-note {
@@ -451,14 +440,13 @@ footer {
         margin: 1rem auto;
         padding: 10px;
     }
-
+    
     .profile-content {
         flex-direction: column;
     }
 
     .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 모바일에서 2열로 변경 */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .contact-links {

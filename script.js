@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. 네비게이션 링크와 콘텐츠 섹션을 가져옵니다.
-    // 🚩 이제 Hero 버튼 (nav-link 클래스가 있는 모든 링크)도 포함됩니다.
+    // nav-link 클래스를 가진 모든 요소(Header 메뉴 및 Hero 버튼)를 선택합니다.
     const navLinks = document.querySelectorAll('.nav-link'); 
     const sections = document.querySelectorAll('.content-section');
 
-    // 섹션 전환 함수 (중복 코드를 줄이기 위해 함수로 만듭니다)
+    // 섹션 전환 함수
     const switchSection = (targetId) => {
         // 3. 모든 섹션을 숨기고, 모든 링크의 활성 상태를 제거합니다.
         sections.forEach(section => {
