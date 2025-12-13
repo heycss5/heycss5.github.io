@@ -412,3 +412,55 @@ main {
         padding: 20px;
     }
 }
+/* --- 6. Contact Section Styles --- */
+
+.contact-links {
+    display: flex; /* 가로 배열 */
+    justify-content: center; /* 중앙 정렬 */
+    flex-wrap: wrap; /* 모바일에서 줄 바꿈 */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white; /* 텍스트 색상 흰색 */
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.contact-link i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* 플랫폼별 색상 지정 */
+.contact-link.github {
+    background-color: #333;
+}
+
+.contact-link.linkedin {
+    background-color: #0077B5;
+}
+
+.contact-link.instagram {
+    /* Instagram 그라데이션 대신 단색 또는 포인트 컬러 사용 */
+    background-color: #E4405F; 
+}
+
+.footer-note {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.1em;
+    color: var(--sub-text-color);
+}
