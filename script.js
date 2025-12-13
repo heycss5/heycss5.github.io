@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. 모든 네비게이션 링크와 콘텐츠 섹션을 가져옵니다.
+    // 1. 네비게이션 링크와 콘텐츠 섹션을 가져옵니다.
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.content-section');
 
     // 2. 각 네비게이션 링크에 클릭 이벤트를 추가합니다.
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault(); // 링크 클릭 시 페이지 이동(새로고침) 방지
+            e.preventDefault(); 
 
             // 3. 모든 섹션을 숨기고, 모든 링크의 활성 상태를 제거합니다.
             sections.forEach(section => {
@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // 4. 클릭된 링크의 data-section 속성 값(id)을 가져옵니다.
-            const targetId = link.getAttribute('data-section'); // 예: 'profile'
+            const targetId = link.getAttribute('data-section'); 
 
             // 5. 목표 섹션을 찾아서 보이게 만듭니다.
             const targetSection = document.getElementById(`section-${targetId}`);
             if (targetSection) {
-                targetSection.classList.add('active'); // CSS의 .content-section.active 적용
+                targetSection.classList.add('active'); 
             }
 
             // 6. 현재 클릭된 링크에 활성 상태를 표시합니다.
