@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 포트폴리오 웹사이트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>나의 이름 | 학부생 포트폴리오</h1>
+            <nav>
+                <a href="#section-profile" class="nav-link active" data-section="profile">Profile</a>
+                <a href="#section-journey" class="nav-link" data-section="journey">Journey</a>
+                <a href="#section-archive" class="nav-link" data-section="archive">Archive</a>
+                <a href="#section-projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#section-contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="section-profile" class="content-section active">
+            <h2>Profile | 소속 연구실</h2>
+            <p>개인 소개, 학업 목표, 그리고 소속 연구실에서의 역할 등을 작성하여 전문성을 어필하는 공간입니다.</p>
+            </section>
+
+        <section id="section-journey" class="content-section">
+            <h2>Journey | 나의 여정</h2>
+            <div class="timeline-container">
+                <div class="timeline-item"><h3>2024년: 입학</h3><p>웹 개발에 관심을 갖게 된 계기 작성</p></div>
+                <div class="timeline-item"><h3>2025년: 연구실 참여</h3><p>연구실에서 맡은 역할과 배운 점을 명시</p></div>
+                </div>
+        </section>
+
+        <section id="section-archive" class="content-section">
+            <h2>Archive | 나의 아카이브</h2>
+            <div class="archive-filters">
+                <button data-filter="all">All</button>
+                <button data-filter="music">Music</button>
+                <button data-filter="fashion">Fashion</button>
+                <button data-filter="photo">Photos</button>
+            </div>
+            
+            <div class="archive-items grid-layout">
+                <div class="item music"><h3>플레이리스트</h3><p>좋아하는 곡/장르 목록</p></div>
+                <div class="item fashion"><h3>패션 인플루언서</h3><p>영감을 받는 인플루언서 3명</p></div>
+                <div class="item photo"><img src="placeholder.jpg" alt="좋아하는 사진"></div>
+            </div>
+        </section>
+
+        <section id="section-projects" class="content-section">
+            <h2>Projects | 기술적 결과물</h2>
+            <div class="project-list flex-layout">
+                <div class="project-card"><h3>프로젝트 1</h3><p>주요 사용 기술: HTML, CSS</p></div>
+                <div class="project-card"><h3>프로젝트 2</h3><p>주요 사용 기술: JavaScript</p></div>
+                </div>
+        </section>
+
+        <section id="section-contact" class="content-section">
+            <h2>Contact | 연락처</h2>
+            <p>GitHub 링크, 이메일 주소 등</p>
+            <address>
+                <a href="https://github.com/your-id" target="_blank">GitHub 바로가기</a>
+            </address>
+        </section>
+
+        <script src="script.js"></script> 
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

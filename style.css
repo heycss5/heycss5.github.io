@@ -1,0 +1,124 @@
+:root {
+    /* 색상 변수를 설정하여 다크 모드 전환 시 쉽게 변경 가능 */
+    --primary-color: #333;   /* 기본 텍스트 및 배경 */
+    --secondary-color: #f4f4f4; /* 배경 */
+    --accent-color: #007bff;  /* 강조 색상 (메뉴 활성화 등) */
+    --text-color: #333;
+}
+
+/* 기본 스타일 및 초기화 */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 다크 모드 예시 (JS로 body에 .dark-mode 클래스를 토글하면 됨) */
+body.dark-mode {
+    --primary-color: #f4f4f4;
+    --secondary-color: #1a1a1a;
+    --text-color: #f4f4f4;
+}
+
+
+/* --- 1. Header 및 Navigation 스타일 --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* 좌우 정렬 */
+    align-items: center;
+}
+
+h1 { margin: 0; font-size: 1.5rem; }
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a.active {
+    color: var(--accent-color); /* 현재 선택된 메뉴 강조 */
+    border-bottom: 2px solid var(--accent-color);
+}
+
+
+/* --- 2. Main Content 레이아웃 --- */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    /* 모든 콘텐츠 섹션은 기본적으로 숨겨짐 */
+}
+
+.content-section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+    display: none; /* JS로 제어할 기본 설정 */
+}
+
+.content-section.active {
+    display: block; /* JS로 활성화될 때만 보이게 함 */
+}
+
+/* --- 3. Archive/Projects 등 내부 레이아웃 --- */
+
+.flex-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* 반응형을 위해 줄바꿈 가능하게 설정 */
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 사진 등 카드형 레이아웃 */
+    gap: 20px;
+}
+
+/* 타임라인 컨테이너 예시 */
+.timeline-container {
+    padding: 20px 0;
+    border-left: 2px solid #ccc;
+    margin-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* --- 4. 반응형 미디어 쿼리 --- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    main {
+        margin: 1rem auto;
+        padding: 10px;
+    }
+    .flex-layout {
+        flex-direction: column; /* 모바일에서는 세로로 쌓이도록 설정 */
+    }
+}
