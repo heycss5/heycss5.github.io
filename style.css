@@ -5,8 +5,9 @@
     --secondary-color: #f4f4f4;
     --accent-color: #007bff;
     --text-color: #333;
-    --sub-text-color: #666; 
-    --secondary-bg-color: #ffffff; /* 카드 배경 색상 */
+    --sub-text-color: #666;
+    --secondary-bg-color: #ffffff;
+    /* 카드 배경 색상 */
 }
 
 /* 기본 스타일 및 초기화 */
@@ -47,6 +48,30 @@ header {
     align-items: center;
 }
 
+/* style.css 파일의 Header 섹션 (--- 1. Header 및 Navigation 스타일 ---)에 추가 */
+
+.site-title-link {
+    color: var(--secondary-color);
+    /* 링크 색상을 흰색/배경색과 동일하게 설정 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.site-title-link:hover {
+    opacity: 0.8;
+    /* 호버 시 약간 흐려지도록 효과 부여 */
+}
+
+/* h1 태그 자체의 스타일은 그대로 유지 */
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
 h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -71,7 +96,7 @@ nav a.active {
 .hero-section {
     padding: 100px 20px;
     text-align: center;
-    background-color: var(--secondary-bg-color); 
+    background-color: var(--secondary-bg-color);
     border-bottom: 2px solid #ddd;
 }
 
@@ -136,14 +161,14 @@ main {
 
 .content-section {
     /* 섹션 전환을 위한 필수 설정: 기본적으로 숨김 */
-    display: none; 
+    display: none;
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
 }
 
 .content-section.active {
     /* JavaScript로 활성화될 때만 보이게 함 */
-    display: block; 
+    display: block;
 }
 
 
@@ -152,8 +177,8 @@ main {
 .profile-content {
     /* 🚩 Profile 레이아웃을 세로(column)로 변경 */
     display: flex;
-    flex-direction: column; 
-    gap: 30px; 
+    flex-direction: column;
+    gap: 30px;
     padding-top: 20px;
 }
 
@@ -212,7 +237,7 @@ main {
     display: block;
     border-radius: 4px;
     object-fit: cover;
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1;
 }
 
 .gallery-item {
@@ -222,6 +247,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
 }
+
 .gallery-item:hover {
     transform: scale(1.02);
 }
@@ -272,8 +298,13 @@ main {
 }
 
 @keyframes zoom {
-    from { transform: scale(0) }
-    to { transform: scale(1) }
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 
@@ -401,7 +432,7 @@ main {
 }
 
 .contact-link.instagram {
-    background-color: #E4405F; 
+    background-color: #E4405F;
 }
 
 .footer-note {
@@ -440,13 +471,13 @@ footer {
         margin: 1rem auto;
         padding: 10px;
     }
-    
+
     .profile-content {
         flex-direction: column;
     }
 
     .image-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-links {
