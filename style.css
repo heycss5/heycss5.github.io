@@ -313,3 +313,102 @@ main {
 .gallery-item {
     cursor: pointer;
 }
+
+/* --- 5. Project Section Styles --- */
+.section-description {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: var(--sub-text-color);
+}
+
+/* 프로젝트 컨테이너 (하나의 카드만 있어도 Grid 스타일을 유지) */
+.projects-container {
+    display: grid;
+    /* 1개 컬럼으로 설정 (카드가 하나만 있다면 가운데에 깔끔하게 배치됨) */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    /* 카드가 하나이므로 중앙 정렬을 위한 스타일 추가 */
+    justify-items: center;
+}
+
+/* 개별 프로젝트 카드 스타일 */
+.project-card {
+    background-color: var(--secondary-bg-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 650px;
+    /* 카드 최대 너비를 지정하여 너무 커지는 것을 방지 */
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    /* 호버 시 살짝 떠오르는 효과 */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    color: var(--accent-color);
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.project-meta {
+    margin-bottom: 10px;
+}
+
+.meta-item {
+    display: inline-block;
+    font-size: 0.9em;
+    color: var(--sub-text-color);
+    margin-right: 15px;
+}
+
+.project-tech {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* 프로젝트 링크/다운로드 버튼 스타일 */
+.project-links {
+    text-align: center;
+    /* 버튼을 중앙에 배치 */
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    /* 버튼 크기 키움 */
+    margin-top: 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    /* 폰트 크기 키움 */
+    transition: background-color 0.3s;
+}
+
+/* 다운로드 버튼 스타일 (demo-link 클래스 사용) */
+.demo-link {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.demo-link:hover {
+    background-color: #007bff;
+}
+
+.project-links a i {
+    margin-right: 8px;
+}
+
+/* 모바일 최적화 (Project Card는 이미 1컬럼이므로 큰 변화 없음) */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 20px;
+    }
+}
