@@ -30,10 +30,10 @@
                 <div class="bio">
                     <h3>Introduction and Activities</h3>
                     <p>
-                        I am currently an undergraduate student in the **Department of Computer Information
-                        Engineering** at **Kunsan National University**.
+                        I am currently an undergraduate student in the Department of Computer Information
+                        Engineering at Kunsan National University.
                         <br>
-                        My research interest lies in **Immersive Media and Computer Vision**, focusing on solving
+                        My research interest lies in Immersive Media and Computer Vision, focusing on solving
                         real-world problems by applying cutting-edge AI technologies to the acquisition, compression,
                         and rendering of photorealistic scenes.
                     </p>
@@ -57,26 +57,41 @@
         </section>
 
         <section id="section-archive" class="content-section">
-            <h2>Archive | 나의 아카이브</h2>
-            <div class="archive-filters">
-                <button data-filter="all">All</button>
-                <button data-filter="music">Music</button>
-                <button data-filter="fashion">Fashion</button>
-                <button data-filter="photo">Photos</button>
-            </div>
+            <h2>Archive | Inspirations</h2>
 
-            <div class="archive-items grid-layout">
-                <div class="item music">
-                    <h3>플레이리스트</h3>
-                    <p>좋아하는 곡/장르 목록</p>
+            <nav class="archive-tabs">
+                <a href="#" class="archive-tab-link active" data-tab="fashion">Fashion</a>
+                <a href="#" class="archive-tab-link" data-tab="music">Music</a>
+                <a href="#" class="archive-tab-link" data-tab="photo">Photo</a>
+            </nav>
+
+            <div class="archive-content-wrapper">
+
+                <div id="tab-fashion" class="archive-tab-content active">
+                    <h3>Fashion Collection</h3>
+                    <p>Here are the styles and brands that influence my daily aesthetic. (여기에 패션 관련 이미지나 설명 텍스트를 채워주세요.)
+                    </p>
                 </div>
-                <div class="item fashion">
-                    <h3>패션 인플루언서</h3>
-                    <p>영감을 받는 인플루언서 3명</p>
+
+                <div id="tab-music" class="archive-tab-content">
+                    <h3>Music Playlist</h3>
+                    <ul>
+                        <li>Artist/Track 1: (예: Deftones - Change)</li>
+                        <li>Artist/Track 2: (여기에 좋아하는 노래 목록을 채워주세요.)</li>
+                    </ul>
                 </div>
-                <div class="item photo"><img src="placeholder.jpg" alt="좋아하는 사진"></div>
+
+                <div id="tab-photo" class="archive-tab-content">
+                    <h3>Visual Gallery</h3>
+                    <p>A collection of photos and visuals that provide creative inspiration.</p>
+                    <div class="image-grid">
+                        <img src="path/to/photo1.jpg" alt="Visual inspiration 1">
+                    </div>
+                </div>
+
             </div>
         </section>
+
 
         <section id="section-projects" class="content-section">
             <h2>Project</h2>

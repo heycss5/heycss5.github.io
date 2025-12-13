@@ -122,3 +122,53 @@ main {
         flex-direction: column; /* 모바일에서는 세로로 쌓이도록 설정 */
     }
 }
+/* --- Archive 탭 네비게이션 스타일 --- */
+.archive-tabs {
+    display: flex; /* 버튼을 가로로 배열 */
+    margin: 20px 0;
+    border-bottom: 2px solid #eee;
+}
+
+.archive-tab-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    opacity: 0.6; /* 비활성 탭은 흐리게 */
+    transition: opacity 0.3s;
+}
+
+.archive-tab-link:hover {
+    opacity: 1;
+}
+
+.archive-tab-link.active {
+    opacity: 1;
+    border-bottom: 3px solid var(--accent-color); /* 활성 탭 밑줄 강조 */
+}
+
+/* --- 서브 콘텐츠 숨김/표시 처리 (핵심) --- */
+.archive-tab-content {
+    display: none; /* 모든 콘텐츠는 기본적으로 숨김 */
+    padding: 20px 0;
+}
+
+.archive-tab-content.active {
+    display: block; /* active 클래스가 붙으면 보이게 함 */
+}
+
+/* 이미지 그리드 (Photo 섹션 전용) */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    margin-top: 15px;
+}
+.image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+}
+/* (기존 CSS에 .image-grid가 있었다면 덮어쓰기됩니다) */

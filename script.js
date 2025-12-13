@@ -34,3 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('section-profile').classList.add('active');
     document.querySelector('.nav-link[data-section="profile"]').classList.add('active');
 });
+// --- Archive 섹션 내부의 탭 전환 기능 ---
+const archiveTabLinks = document.querySelectorAll('.archive-tab-link');
+const archiveContents = document.querySelectorAll('.archive-tab-content');
+
+archiveTabLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // 1. 모든 탭 링크와 콘텐츠의 active 클래스 제거
+        archiveTabLinks.forEach(tab => tab.classList.remove('active'));
+        archiveContents.forEach(content => content.classList.remove('active'));
+
+        // 2. 클릭된 링크에 active 클래스 추가
+        link.classList.add('active');
+
+        // 3. 해당 탭 콘텐츠를 찾아서 active 클래스 추가 (보이게 함)
+        const targetTab = link.getAttribute('data-tab'); // 예: 'fashion'
+        document.getElementById(`tab-${targetTab}`).classList.add('active');
+    });
+});
