@@ -30,61 +30,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 페이지 로드 시 기본으로 'Profile' 섹션을 활성화합니다.
-    document.getElementById('section-profile').classList.add('active');
-    document.querySelector('.nav-link[data-section="profile"]').classList.add('active');
-});
-// --- Archive 섹션 내부의 탭 전환 기능 ---
-const archiveTabLinks = document.querySelectorAll('.archive-tab-link');
-const archiveContents = document.querySelectorAll('.archive-tab-content');
+    // 🚩 페이지 로드 시 기본으로 'Home' 섹션을 활성화합니다.
+    const initialSectionId = 'home';
+    document.getElementById(`section-${initialSectionId}`).classList.add('active');
+    document.querySelector(`.nav-link[data-section="${initialSectionId}"]`).classList.add('active');
 
-archiveTabLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
 
-        // 1. 모든 탭 링크와 콘텐츠의 active 클래스 제거
-        archiveTabLinks.forEach(tab => tab.classList.remove('active'));
-        archiveContents.forEach(content => content.classList.remove('active'));
+    // --- Archive 섹션 내부의 탭 전환 기능 ---
+    const archiveTabLinks = document.querySelectorAll('.archive-tab-link');
+    const archiveContents = document.querySelectorAll('.archive-tab-content');
 
-        // 2. 클릭된 링크에 active 클래스 추가
-        link.classList.add('active');
+    archiveTabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
 
-        // 3. 해당 탭 콘텐츠를 찾아서 active 클래스 추가 (보이게 함)
-        const targetTab = link.getAttribute('data-tab'); // 예: 'fashion'
-        document.getElementById(`tab-${targetTab}`).classList.add('active');
+            // 1. 모든 탭 링크와 콘텐츠의 active 클래스 제거
+            archiveTabLinks.forEach(tab => tab.classList.remove('active'));
+            archiveContents.forEach(content => content.classList.remove('active'));
+
+            // 2. 클릭된 링크에 active 클래스 추가
+            link.classList.add('active');
+
+            // 3. 해당 탭 콘텐츠를 찾아서 active 클래스 추가 (보이게 함)
+            const targetTab = link.getAttribute('data-tab'); // 예: 'fashion'
+            document.getElementById(`tab-${targetTab}`).classList.add('active');
+        });
     });
-});
-// --- 라이트박스 (모달) 기능 구현 ---
-const modal = document.getElementById('lightbox-modal');
-const modalImg = document.getElementById('modal-image');
-const captionText = document.getElementById('caption');
-const closeBtn = document.querySelector('.close-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
 
-// 갤러리 아이템 클릭 이벤트 리스너
-galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // 모달을 보이게 함
-        modal.style.display = "block";
+    // --- 라이트박스 (모달) 기능 구현 ---
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('modal-image');
+    const captionText = document.getElementById('caption');
+    const closeBtn = document.querySelector('.close-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-        // 데이터 속성에서 이미지 경로와 캡션을 가져옴
-        const fullSrc = item.getAttribute('data-full-src');
-        const caption = item.getAttribute('data-caption');
+    // 갤러리 아이템 클릭 이벤트 리스너
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // 모달을 보이게 함
+            modal.style.display = "block";
 
-        // 모달 내용 채우기
-        modalImg.src = fullSrc;
-        captionText.innerHTML = caption;
+            // 데이터 속성에서 이미지 경로와 캡션을 가져옴
+            const fullSrc = item.getAttribute('data-full-src');
+            const caption = item.getAttribute('data-caption');
+
+            // 모달 내용 채우기
+            modalImg.src = fullSrc;
+            captionText.innerHTML = caption;
+        });
     });
-});
 
-// 닫기 버튼 클릭 이벤트
-closeBtn.onclick = function () {
-    modal.style.display = "none";
-}
-
-// 모달 외부 클릭 시 닫기
-window.onclick = function (event) {
-    if (event.target == modal) {
+    // 닫기 버튼 클릭 이벤트
+    closeBtn.onclick = function () {
         modal.style.display = "none";
     }
-}
+
+    // 모달 외부 클릭 시 닫기
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
