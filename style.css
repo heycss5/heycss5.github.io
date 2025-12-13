@@ -66,6 +66,70 @@ nav a.active {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
+/* --- 1.5 Hero Section (Home Screen) Styles --- */
+
+.hero-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--secondary-bg-color); /* 흰색 배경 */
+    border-bottom: 2px solid #ddd;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-greeting {
+    font-size: 1.2em;
+    color: var(--sub-text-color);
+    margin-bottom: 5px;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.hero-title .highlight {
+    color: var(--accent-color);
+}
+
+.hero-tagline {
+    font-size: 1.2em;
+    color: var(--sub-text-color);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.hero-button i {
+    margin-left: 10px;
+}
+
+/* 🚩 Profile 섹션의 active 클래스를 제거하여 초기에는 Hero만 보이도록 합니다. */
+#section-profile {
+    display: none; 
+}
+/* 단, JS가 로드된 후 JS가 다시 Profile을 active로 만들 수 있으므로, JS 코드를 수정해야 합니다. */
 
 
 /* --- 2. Main Content 레이아웃 및 섹션 전환 (핵심) --- */
