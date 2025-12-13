@@ -92,14 +92,15 @@ main {
 
 .profile-content {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     flex-wrap: wrap;
 }
 
 .profile-content .bio,
 .profile-content .history-timeline {
-    flex: 1;
-    min-width: 300px;
+    width: 100%;
+    margin-top: 0;
 }
 
 /* --- Archive 탭 네비게이션 스타일 --- */
