@@ -392,6 +392,14 @@ main {
 
 /* --- 5. Contact Section Styles --- */
 
+/* 이메일 링크 색상 지정 */
+.contact-link.email {
+    /* 이메일에 적합한 전문적인 색상(예: 짙은 회색 또는 파란색 계열) 사용 */
+    background-color: #d9534f;
+    /* 붉은 계열 (Gmail 스타일) */
+    /* background-color: #3f729b; /* 대체: 짙은 파란색 */
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
