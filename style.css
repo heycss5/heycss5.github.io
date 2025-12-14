@@ -485,3 +485,112 @@ footer {
         align-items: center;
     }
 }
+
+/* --- TIME TABLE STYLES --- */
+
+.schedule-table {
+    margin-top: 50px;
+    /* 위쪽 섹션과의 간격 확보 */
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.schedule-table h3 {
+    border-bottom: 2px solid var(--accent-color);
+    /* 강조색으로 제목 밑줄 */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    /* 테이블 셀 경계선 병합 */
+    font-size: 0.9em;
+    table-layout: fixed;
+    /* 셀 너비 고정 */
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ddd;
+    padding: 8px 4px;
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    /* 시간표 셀 높이 고정 */
+}
+
+.timetable th {
+    background-color: #e9ecef;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.time-slot {
+    width: 40px;
+    /* 시간 칸 너비 고정 */
+    font-weight: bold;
+    background-color: #f7f7f7;
+    color: var(--sub-text-color);
+}
+
+/* 수업이 있는 칸 스타일 */
+.class-cell {
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+    /* 텍스트를 흰색으로 변경 */
+    border: 1px solid var(--accent-color);
+}
+
+/* 각 과목별 색상 지정 (이미지 기반) */
+.class-color-red {
+    background-color: #dc5f5f;
+    /* 기초웹프로그래밍 */
+}
+
+.class-color-green {
+    background-color: #79c298;
+    /* 통계학입문 */
+}
+
+.class-color-orange1 {
+    background-color: #e7c27e;
+    /* 기초글쓰기 */
+}
+
+.class-color-orange2 {
+    background-color: #ec9f44;
+    /* 영어2 */
+}
+
+.class-color-green2 {
+    background-color: #8cc375;
+    /* Python 프로그래밍 */
+}
+
+.class-color-blue {
+    background-color: #55aaff;
+    /* 프로그래밍언어및실습(1) */
+}
+
+
+/* 모바일 반응형 (TimeTable) */
+@media (max-width: 768px) {
+    .timetable {
+        font-size: 0.8em;
+    }
+
+    .timetable th,
+    .timetable td {
+        padding: 6px 2px;
+        height: 30px;
+    }
+
+    .time-slot {
+        width: 30px;
+    }
+}

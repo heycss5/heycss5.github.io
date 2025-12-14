@@ -74,6 +74,98 @@
                         </li>
                     </ul>
                 </div>
+                <div class="schedule-table">
+                    <h3>Current Semester TimeTable</h3>
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-slot">09</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10</td>
+                                <td></td>
+                                <td class="class-cell class-color-green" rowspan="2">통계학입문<br>공대3-13103</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11</td>
+                                <td class="class-cell class-color-red" rowspan="2">기초웹프로그래밍<br>디지털정보관-302(PC실)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">12</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="class-cell class-color-red" rowspan="2">기초웹프로그래밍<br>디지털정보관-302(PC실)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">13</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">14</td>
+                                <td class="class-cell class-color-orange1" rowspan="2">기초글쓰기<br>인문관-1103</td>
+                                <td class="class-cell class-color-blue" rowspan="3">프로그래밍언어및실습(1)<br>디지털정보관-224</td>
+                                <td></td>
+                                <td class="class-cell class-color-orange2" rowspan="2">영어2<br>인문관-1331</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">15</td>
+                                <td></td>
+                                <td class="class-cell class-color-orange1" rowspan="2">기초글쓰기<br>인문관-1103</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">16</td>
+                                <td class="class-cell class-color-green2" rowspan="2">Python프로그래밍<br>디지털정보관-101</td>
+                                <td></td>
+                                <td></td>
+                                <td class="class-cell class-color-blue" rowspan="3">프로그래밍언어및실습(1)<br>디지털정보관-224</td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">17</td>
+                                <td class="class-cell class-color-green2" rowspan="2">Python프로그래밍<br>디지털정보관-101</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">18</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </section>
 
@@ -91,7 +183,7 @@
                 <div id="tab-fashion" class="archive-tab-content active">
                     <h3>Fashion Collection</h3>
                     <div class="fashion-list">
-                        <h4>Influencers for Aesthetic Inspiration <i class="fab fa-instagram"></i></h4>
+                        <h4>Influencers Instagram<i class="fab fa-instagram"></i></h4>
                         <ul>
                             <li>
                                 <a href="https://www.instagram.com/hxxax_?igsh=MXltbXhtZmxoeTgz"
@@ -128,7 +220,6 @@
 
                 <div id="tab-music" class="archive-tab-content">
                     <h3>Music Playlist</h3>
-                    <p>Discover my current playlist and favorite tracks on the following platforms.</p>
                     <div class="music-links-container">
                         <ul>
                             <li>
@@ -149,9 +240,7 @@
                 </div>
 
                 <div id="tab-photo" class="archive-tab-content">
-                    <h3>Memories</h3>
-                    <p>A collection of photos that hold cherished memories and serve as a constant source of inspiration
-                        for my daily life. Click on any image to zoom in.</p>
+                    <h3>Memories Photos</h3>
                     <div class="image-grid photo-gallery">
                         <div class="gallery-item" data-full-src="memory/minimal_city_view.jpg"
                             data-caption="Minimalist perspective of the city.">
@@ -178,13 +267,10 @@
 
         <section id="section-project" class="content-section">
             <h2>Project</h2>
+
             <p class="section-description">
-                This is a program developed using C and Python languages.
-                The project functions as a **Source Code Translator** designed to automatically recognize specific
-                syntax and structures in source code and convert them into the format of another language.
-                <br>
-                *You can download the program directly via the button below.*
             </p>
+
             <div class="projects-container">
                 <div class="project-card">
                     <h3 class="project-title">C/Python File Converter</h3>
@@ -195,6 +281,12 @@
                     <p class="project-tech">
                         **Tech Stack:** Python, C Language, [GUI Library used, e.g., Tkinter]
                     </p>
+
+                    <p class="project-description">
+                        Utility for automated syntax recognition and structure conversion between different programming
+                        language source files.
+                    </p>
+
                     <div class="project-links" style="text-align: center;">
                         <a href="[Direct Download URL from Google Drive, Dropbox, etc.]" target="_blank"
                             class="project-link demo-link" style="padding: 12px 25px; font-size: 1.1em;">
