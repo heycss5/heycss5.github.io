@@ -63,7 +63,7 @@ header {
 
 .site-title-link:hover {
     opacity: 0.8;
-    /* 호버 시 약간 흐려지도록 효과 부여 */
+   
 }
 
 /* h1 태그 자체의 스타일은 그대로 유지 */
@@ -160,14 +160,13 @@ main {
 }
 
 .content-section {
-    /* 섹션 전환을 위한 필수 설정: 기본적으로 숨김 */
     display: none;
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
 }
 
 .content-section.active {
-    /* JavaScript로 활성화될 때만 보이게 함 */
+    
     display: block;
 }
 
@@ -393,21 +392,21 @@ main {
 /* --- 5. Contact Section Styles --- */
 
 .contact-email-text {
-    text-align: center; /* 가운데 정렬 */
-    font-size: 1.2em; /* 크기 약간 키우기 */
-    font-weight: 600; /* 굵게 표시 */
+    text-align: center; 
+    font-size: 1.2em; 
+    font-weight: 600;
     color: var(--text-color);
     margin-top: 5px;
-    margin-bottom: 25px; /* 아래 링크들과 간격 주기 */
+    margin-bottom: 25px; 
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    align-items: center; /* 항목들을 중앙에 정렬 */
-    gap: 15px; /* 버튼 간의 수직 간격 */
-    margin-top: 30px; /* 위쪽 여백 유지 */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 30px; 
 }
 
 .contact-link {
@@ -420,10 +419,10 @@ main {
     font-size: 1.1em;
     color: white;
     transition: transform 0.3s, opacity 0.3s;
-    width: 80%; /* 컨테이너 너비의 80%를 사용 */
-    max-width: 400px; /* 최대 너비를 설정하여 너무 넓어지는 것을 방지 */
-    text-align: left; /* 텍스트를 왼쪽으로 정렬 */
-    padding-left: 30px; /* 왼쪽에 충분한 여백 추가 */
+    width: 80%; 
+    max-width: 400px; 
+    text-align: left; 
+    padding-left: 30px; 
 }
 
 .contact-link:hover {
